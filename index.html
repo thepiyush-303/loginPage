@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CGPA Calculator</title>
+</head>
+<body>
+<link rel="stylesheet" href="style.css"> 
+<div class="container">
+  <h2>CGPA Calculator</h2>
+  <div class="form-group">
+    <label for="subject1">Computer Systems And Programming:</label>
+    <input type="number" id="subject1" min="1" max="10" placeholder="Enter grade">
+  </div>
+  <div class="form-group">
+    <label for="subject2">Digital Design:</label>
+    <input type="number" id="subject2" min="1" max="10" placeholder="Enter grade">
+  </div>
+  <div class="form-group">
+    <label for="subject3">Circuit Theory:</label>
+    <input type="number" id="subject3" min="1" max="10" placeholder="Enter grade">
+  </div>
+  <div class="form-group">
+    <label for="subject4">Communications Skills:</label>
+    <input type="number" id="subject4" min="1" max="10" placeholder="Enter grade">
+  </div>
+  <div class="form-group">
+    <label for="subject5">Mathematics - 1:</label>
+    <input type="number" id="subject5" min="1" max="10" placeholder="Enter grade">
+  </div>
+  <div class="form-group">
+    <label for="subject6">Computer Systems Lab:</label>
+    <input type="number" id="subject6" min="1" max="10" placeholder="Enter grade">
+  </div>
+  <div class="form-group">
+    <label for="subject7">IT Workshop - 1:</label>
+    <input type="number" id="subject7" min="1" max="10" placeholder="Enter grade">
+  </div>
+  <div class="form-group">
+    <label for="subject8">Digital Design Lab:</label>
+    <input type="number" id="subject8" min="1" max="10" placeholder="Enter grade">
+  </div>
+  <div class="form-group">
+    <label for="subject9">System Simulation Lab:</label>
+    <input type="number" id="subject9" min="1" max="10" placeholder="Enter grade">
+  </div>
+  <div class="form-group">
+    <label for="subject10">Communication Skills Lab:</label>
+    <input type="number" id="subject10" min="1" max="10" placeholder="Enter grade">
+  </div>
+  <div class="form-group">
+    <label for="subject11">Upanayan - The Induction Programme:</label>
+    <input type="number" id="subject11" min="1" max="10" placeholder="Enter grade">
+  </div>
+  <button onclick="calculateCGPA()">Calculate CGPA</button>
+  <p id="result"></p>
+</div>
+
+<script>
+  function calculateCGPA() {
+    var subject1 = parseFloat(document.getElementById('subject1').value);
+    var subject2 = parseFloat(document.getElementById('subject2').value);
+    var subject3 = parseFloat(document.getElementById('subject3').value);
+    var subject4 = parseFloat(document.getElementById('subject4').value);
+    var subject5 = parseFloat(document.getElementById('subject5').value);
+    var subject6 = parseFloat(document.getElementById('subject6').value);
+    var subject7 = parseFloat(document.getElementById('subject7').value);
+    var subject8 = parseFloat(document.getElementById('subject8').value);
+    var subject9 = parseFloat(document.getElementById('subject9').value);
+    var subject10 = parseFloat(document.getElementById('subject10').value);
+    var subject11 = parseFloat(document.getElementById('subject11').value);
+
+    var totalCredits = 26; // Total credits
+    var subjectCredits = [3, 4, 4, 2, 4, 2, 2, 1, 1, 1, 2]; // Credits for each subject
+    var totalGradePoints = (subject1 * subjectCredits[0]) + (subject2 * subjectCredits[1]) + (subject3 * subjectCredits[2]) + (subject4 * subjectCredits[3]) + (subject5 * subjectCredits[4]) + (subject6 * subjectCredits[5]) + (subject7 * subjectCredits[6]) + (subject8 * subjectCredits[7]) + (subject9 * subjectCredits[8]) + (subject10 * subjectCredits[9]) + (subject11 * subjectCredits[10]);
+    var cgpa = totalGradePoints / totalCredits;
+
+    document.getElementById('result').innerHTML = "Your CGPA is: " + cgpa.toFixed(2);
+  }
+</script>
+
+</body>
+</html>
+
