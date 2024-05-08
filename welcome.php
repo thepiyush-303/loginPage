@@ -111,7 +111,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                 Add images or other elements here
                 <img src="https://via.placeholder.com/400" class="img-fluid" alt="Placeholder Image">
             </div> -->
-            <a href="index.html"><button>Calculate CGPA</button></a>
+            <a href="cgpa.html"><button>Calculate CGPA</button></a>
         </div>
     </div>  
 
